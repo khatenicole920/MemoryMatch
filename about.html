@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About — The Daily Sleuth Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .team-container { max-width: 800px; margin: 0 auto; }
+        .team-card { background: var(--parchment2); border: 2px solid var(--parchment3); padding: 1.5rem; margin: 1.5rem 0; border-radius: 12px; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+        .avatar { font-size: 4rem; background: var(--parchment); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid var(--gold); }
+        .member-info { flex: 1; }
+        .member-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
+        .member-role { font-family: 'Oswald', sans-serif; font-size: 0.7rem; color: var(--stamp-red); letter-spacing: 2px; margin: 4px 0; }
+        .github-btn { background: var(--ink); color: var(--cream); padding: 6px 12px; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 0.7rem; display: inline-block; margin-top: 8px; border-radius: 4px; transition: background 0.2s; }
+        .github-btn:hover { background: var(--brown); transform: translateY(-1px); }
+        .institution-card { text-align: center; background: var(--parchment); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; }
+        @media (max-width: 600px) { .team-card { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <div class="torn-edge-top"></div>
+
+    <div class="portal-container">
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="game.html">Play Game</a>
+                <a href="archive.html">Archive</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-date">The Daily Sleuth — Est. 1887</div>
+        </div>
+
+        <div class="team-container">
+            <div class="masthead">
+                <div class="edition-row">
+                    <span>MEET THE TEAM</span>
+                    <span>SPECIAL EDITION</span>
+                    <span>WST 2026</span>
+                </div>
+                <h1 class="logo">ABOUT US</h1>
+                <p class="strapline">"The Detectives Behind The Daily Sleuth"</p>
+            </div>
+
+            <!-- Institution Info -->
+            <div class="institution-card">
+                <h3>🏫 University of Perpetual Help System DALTA — Molino Campus</h3>
+                <p><strong>College of Computer Studies</strong> | 2nd Year — Game Development</p>
+                <p>Web Systems and Technologies | WST Final Project: 2-Week Sprint</p>
+                <p>Genre: Memory Match / Concentration</p>
+            </div>
+
+            <!-- Team Member 1: Nicole Khate Marquez -->
+            <div class="team-card">
+                <div class="avatar">🕵️‍♀️</div>
+                <div class="member-info">
+                    <div class="member-name">Nicole Khate Marquez</div>
+                    <div class="member-role">LEAD DEVELOPER & GAME LOGIC ENGINEER</div>
+                    <p>Responsible for core game mechanics, card matching logic, state management, timer functionality, hint system, and win condition logic.</p>
+                    <a href="https://github.com/khatenicole920" target="_blank" class="github-btn">🐙 github.com/khatenicole920</a>
+                </div>
+            </div>
+
+            <!-- Team Member 2: Shashnae Gayle Francisco -->
+            <div class="team-card">
+                <div class="avatar">🔍</div>
+                <div class="member-info">
+                    <div class="member-name">Shashnae Gayle Francisco</div>
+                    <div class="member-role">FRONTEND DESIGNER & UI/UX ARCHITECT</div>
+                    <p>Designed vintage newspaper aesthetic, responsive layouts, visual styling, landing page, archive page, and CSS architecture.</p>
+                    <a href="https://github.com/FranciscoShashnae17" target="_blank" class="github-btn">🐙 github.com/FranciscoShashnae17</a>
+                </div>
+            </div>
+
+            <!-- Course Info -->
+            <div class="institution-card">
+                <h3>📚 Course Information</h3>
+                <p><strong>Subject:</strong> Web Systems and Technologies (WST)</p>
+                <p><strong>Project:</strong> Final Project — 2-Week Sprint</p>
+                <p><strong>Game Genre Assignment:</strong> Memory Match (#17)</p>
+                <p><strong>Delivery:</strong> GitHub Pages Deployment</p>
+            </div>
+
+            <!-- Acknowledgments -->
+            <div class="institution-card">
+                <h3>🙏 Acknowledgments</h3>
+                <p>Special thanks to our WST instructor for guidance throughout the 14-day development sprint.</p>
+                <p>Open-source community for inspiration and resources.</p>
+            </div>
+
+            <div class="portal-footer">
+                <span>© 2026 Marquez & Francisco | UPHSD Molino — CCS | Web Systems and Technologies</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

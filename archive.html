@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Project Archive — The Daily Sleuth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .archive-container { max-width: 900px; margin: 0 auto; }
+        .version-badge { background: var(--ink); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; display: inline-block; }
+        .changelog-item { border-left: 3px solid var(--gold); padding: 1rem 0 1rem 1.5rem; margin-bottom: 1rem; }
+        .changelog-date { font-family: 'Oswald', sans-serif; font-size: 0.7rem; color: var(--gold); }
+        .milestone { background: var(--parchment2); padding: 1rem; margin: 1rem 0; border-radius: 8px; }
+        @media (max-width: 768px) { .archive-container { padding: 0 1rem; } }
+    </style>
+</head>
+<body>
+    <div class="torn-edge-top"></div>
+
+    <div class="portal-container">
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="game.html">Play Game</a>
+                <a href="archive.html">Archive</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-date">The Daily Sleuth — Est. 1887</div>
+        </div>
+
+        <div class="archive-container">
+            <div class="masthead">
+                <div class="edition-row">
+                    <span>PROJECT ARCHIVE</span>
+                    <span>VOL. 001</span>
+                    <span>WST FINAL</span>
+                </div>
+                <h1 class="logo">THE DAILY SLEUTH</h1>
+                <p class="strapline">"Development Log & Technical Documentation"</p>
+            </div>
+
+            <!-- Version History -->
+            <div class="milestone">
+                <span class="version-badge">v1.0.0 — FINAL RELEASE</span>
+                <h3>🎮 Memory Match Game — Complete</h3>
+                <p>Full game loop with 8 pairs, timer, move counter, hint system, and rank calculation.</p>
+            </div>
+
+            <!-- Development Timeline -->
+            <h2 class="section-title">⏳ Development Timeline (2-Week Sprint)</h2>
+            <div class="changelog-item">
+                <div class="changelog-date">Day 1-2 | Planning</div>
+                <p>Genre assignment (Memory Match), repository creation, wireframing, theme selection.</p>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">Day 3-7 | Core Development</div>
+                <p>Memory match game loop, card flip mechanics, match detection, HTML/CSS structure.</p>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">Day 8-11 | Integration & Styling</div>
+                <p>Game integration into portal, vintage newspaper UI/UX, responsive design.</p>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">Day 12-13 | Testing & Refinement</div>
+                <p>Bug fixes, cross-browser testing, mobile optimization, error handling.</p>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">Day 14 | Final Defense</div>
+                <p>Technical walkthrough, GitHub Pages deployment, project submission.</p>
+            </div>
+
+            <!-- Commit History -->
+            <h2 class="section-title">📜 Git Commit Log</h2>
+            <div class="commit-list">
+                <div class="commit-item">📌 Initial commit — Project setup (Marquez)</div>
+                <div class="commit-item">📌 Add HTML/CSS framework + vintage theme (Francisco)</div>
+                <div class="commit-item">📌 Core memory match game logic (Marquez)</div>
+                <div class="commit-item">📌 Responsive design + mobile optimization (Francisco)</div>
+                <div class="commit-item">📌 Hint system + win conditions (Marquez)</div>
+                <div class="commit-item">📌 Landing page portal design (Francisco)</div>
+                <div class="commit-item">📌 Error handling + localStorage best scores (Marquez)</div>
+                <div class="commit-item">📌 Archive + About pages (Francisco)</div>
+                <div class="commit-item">📌 Cross-browser testing + final fixes (Both)</div>
+                <div class="commit-item">📌 README + deployment prep (Both)</div>
+            </div>
+
+            <!-- Technical Specs -->
+            <h2 class="section-title">🛠️ Technical Specifications</h2>
+            <div class="milestone">
+                <p><strong>Game Engine:</strong> Vanilla JavaScript (ES6+)</p>
+                <p><strong>Grid Size:</strong> 4x4 (8 pairs)</p>
+                <p><strong>State Management:</strong> Custom gameState object</p>
+                <p><strong>Storage:</strong> localStorage for best score persistence</p>
+                <p><strong>Responsive Breakpoints:</strong> 768px (tablet), 480px (mobile)</p>
+            </div>
+
+            <div class="portal-footer">
+                <span>Project Archive — WST Final Project | UPHSD Molino — CCS</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
