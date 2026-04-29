@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Wanted: Memory Match — The Daily Sleuth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="torn-edge-top"></div>
+
+    <div class="game-container">
+        <!-- Navigation -->
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="game.html">Play Game</a>
+                <a href="#">Leaderboard</a>
+                <a href="#">Archives</a>
+                <a href="#">About</a>
+            </div>
+            <div class="nav-date">The Daily Sleuth — Est. 1887</div>
+        </div>
+
+        <!-- Game Area - Compact Layout No Scroll -->
+        <div class="game-layout">
+            <!-- Left Sidebar (compact) -->
+            <div class="game-sidebar">
+                <div class="sidebar-title">CASE FILE</div>
+                <div class="case-note">The Crowbar Bandit strikes at midnight. Match clues to identify the culprit.</div>
+                <div class="classified-mini">
+                    <strong>EVIDENCE LOG</strong>
+                    Mask, Watch, Glove, Rope, Fingerprints...
+                </div>
+            </div>
+
+            <!-- Main Game Panel -->
+            <div class="game-main">
+                <div class="game-header">
+                    <div class="game-title">WANTED: MEMORY MATCH</div>
+                    <div class="game-sub">"Find identical pairs — justice demands it"</div>
+                </div>
+
+                <!-- Score Panel -->
+                <div class="score-panel">
+                    <div class="score-item">
+                        <span class="score-label">🔍 MATCHES</span>
+                        <span class="score-value" id="gameMatches">0 / 8</span>
+                    </div>
+                    <div class="score-divider"></div>
+                    <div class="score-item">
+                        <span class="score-label">📋 MOVES</span>
+                        <span class="score-value" id="gameMoves">0</span>
+                    </div>
+                    <div class="score-divider"></div>
+                    <div class="score-item">
+                        <span class="score-label">⏱️ TIME</span>
+                        <span class="score-value" id="gameTime">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="game-buttons">
+                    <button id="startGameBtn" class="game-btn">▶ START</button>
+                    <button id="restartGameBtn" class="game-btn outline">↺ RESTART</button>
+                    <button id="hintGameBtn" class="game-btn outline">✦ HINT</button>
+                    <button id="leaderboardBtn" class="game-btn outline">⊞ RANKING</button>
+                </div>
+
+                <!-- Card Grid - 4x4 compact -->
+                <div class="game-grid" id="memoryGrid"></div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="game-sidebar">
+                <div class="sidebar-title">DETECTIVE RANKS</div>
+                <div class="rank-info">
+                    <div>S★★★ ≤14 moves</div>
+                    <div>A★★☆ 15-18 moves</div>
+                    <div>B★☆☆ 19-24 moves</div>
+                    <div>C☆☆☆ ≥25 moves</div>
+                </div>
+                <div class="tip-mini mt-2">💡 Hint reveals all cards briefly — use when stuck!</div>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            "The game is afoot." — All Rights Reserved
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="winModal" class="modal-overlay">
+        <div class="modal-paper">
+            <div class="modal-stamp">★ CASE CLOSED ★</div>
+            <div class="modal-headline">JUSTICE SERVED!</div>
+            <div class="modal-stats">
+                <div><span class="modal-label">MOVES</span><span id="finalMoves" class="modal-number">—</span></div>
+                <div><span class="modal-label">TIME</span><span id="finalTime" class="modal-number">—</span></div>
+                <div><span class="modal-label">RANK</span><span id="finalRank" class="modal-number">—</span></div>
+            </div>
+            <div class="modal-buttons">
+                <button id="modalNewGame" class="game-btn">↺ NEW CASE</button>
+                <button id="modalClose" class="game-btn outline">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

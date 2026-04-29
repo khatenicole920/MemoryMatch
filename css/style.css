@@ -1,0 +1,466 @@
+/* ============================================
+   THE DAILY SLEUTH - VINTAGE DETECTIVE THEME
+   External CSS - No inline styles
+============================================ */
+
+:root {
+    --ink: #1a0f00;
+    --ink2: #2d1a00;
+    --parchment: #f5e6c8;
+    --parchment2: #ede0b5;
+    --parchment3: #d4c090;
+    --cream: #faf3e0;
+    --brown: #5c3d1a;
+    --gold: #b8860b;
+    --stamp-red: #8b1a1a;
+    --card-back: #e8d5a3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cream);
+    background-image: radial-gradient(ellipse at 20% 10%, rgba(139,105,20,0.08) 0%, transparent 50%),
+                      repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(26,15,0,0.03) 28px, rgba(26,15,0,0.03) 29px);
+    font-family: 'IM Fell English', serif;
+    min-height: 100vh;
+}
+
+/* Torn Edge */
+.torn-edge-top {
+    width: 100%;
+    height: 12px;
+    background: var(--cream);
+    position: relative;
+}
+.torn-edge-top::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: var(--ink);
+    clip-path: polygon(0 100%, 2% 30%, 4% 90%, 6% 20%, 8% 80%, 10% 10%, 12% 70%, 14% 0%, 16% 60%, 18% 15%, 20% 75%, 22% 5%, 24% 65%, 26% 20%, 28% 80%, 30% 5%, 32% 55%, 34% 15%, 36% 70%, 38% 0%, 40% 60%, 42% 20%, 44% 80%, 46% 10%, 48% 65%, 50% 0%, 52% 55%, 54% 25%, 56% 75%, 58% 5%, 60% 60%, 62% 15%, 64% 70%, 66% 0%, 68% 50%, 70% 20%, 72% 80%, 74% 5%, 76% 65%, 78% 15%, 80% 70%, 82% 5%, 84% 55%, 86% 20%, 88% 80%, 90% 0%, 92% 60%, 94% 25%, 96% 75%, 98% 10%, 100% 50%, 100% 100%);
+    opacity: 0.15;
+}
+
+/* Navigation */
+.nav-bar {
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    border-bottom: 3px solid var(--gold);
+    flex-wrap: wrap;
+}
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+.nav-links a {
+    color: var(--parchment);
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-date {
+    color: var(--parchment3);
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* Portal Layout */
+.portal-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+}
+.portal-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.portal-sidebar {
+    background: rgba(237, 224, 181, 0.4);
+    padding: 1rem;
+    border: 1px solid var(--parchment3);
+}
+.sidebar-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+.news-item {
+    margin-bottom: 16px;
+}
+.news-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 0.5px solid var(--parchment3);
+    margin-bottom: 5px;
+}
+.news-text {
+    font-size: 10px;
+    color: var(--ink2);
+    line-height: 1.4;
+}
+.classified-box {
+    background: var(--parchment2);
+    border: 1px solid var(--parchment3);
+    padding: 10px;
+    font-size: 10px;
+    margin-top: 12px;
+}
+.leaderboard-preview .leader-entry {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 5px 0;
+    border-bottom: 0.5px dotted var(--parchment3);
+}
+.mt-2 { margin-top: 16px; }
+.tip-text { font-size: 10px; line-height: 1.4; }
+
+/* Masthead Portal */
+.masthead {
+    text-align: center;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+.edition-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    font-family: 'Oswald', sans-serif;
+    color: var(--brown);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 3px 0;
+    margin-bottom: 8px;
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--ink);
+    letter-spacing: -1px;
+}
+.strapline {
+    font-style: italic;
+    font-size: 11px;
+    color: var(--brown);
+}
+.game-promo-card {
+    background: var(--parchment2);
+    border: 3px double var(--ink);
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.promo-badge {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    color: var(--stamp-red);
+    letter-spacing: 2px;
+}
+.promo-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 8px 0;
+}
+.promo-desc {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 11px;
+    margin: 12px 0;
+}
+.play-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.play-btn:hover {
+    background: var(--brown);
+    transform: translateY(-2px);
+}
+.howto-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(26,15,0,0.05);
+    padding: 12px;
+    margin-top: 16px;
+}
+.portal-footer {
+    text-align: center;
+    border-top: 2px solid var(--ink);
+    padding: 12px;
+    font-size: 9px;
+    margin-top: 2rem;
+}
+
+/* ========== GAME PAGE STYLES ========== */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 1rem;
+}
+.game-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.game-sidebar {
+    background: rgba(237, 224, 181, 0.5);
+    padding: 12px;
+    border: 1px solid var(--parchment3);
+}
+.case-note {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.classified-mini {
+    background: var(--parchment2);
+    border-left: 3px solid var(--stamp-red);
+    padding: 8px;
+    font-size: 9px;
+}
+.rank-info div {
+    font-size: 10px;
+    padding: 4px 0;
+}
+.tip-mini {
+    font-size: 9px;
+    background: var(--parchment);
+    padding: 8px;
+    border-radius: 2px;
+}
+.game-main {
+    background: var(--cream);
+    border: 1px solid var(--parchment3);
+}
+.game-header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--ink);
+}
+.game-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.game-sub {
+    font-size: 10px;
+    font-style: italic;
+}
+.score-panel {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    background: var(--parchment2);
+    border-bottom: 1px solid var(--parchment3);
+}
+.score-item {
+    text-align: center;
+}
+.score-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+}
+.score-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+.score-divider {
+    width: 1px;
+    background: var(--parchment3);
+}
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.game-btn {
+    background: var(--ink);
+    color: var(--cream);
+    border: 2px solid var(--ink);
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.game-btn.outline {
+    background: transparent;
+    color: var(--ink);
+}
+.game-btn:hover {
+    background: var(--brown);
+    transform: translateY(-1px);
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 16px;
+}
+.memory-card {
+    aspect-ratio: 3 / 4;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.memory-card.flipped, .memory-card.matched {
+    transform: rotateY(180deg);
+}
+.card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+.card-back {
+    background: var(--card-back);
+    border: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-back::after {
+    content: "?";
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--brown);
+    opacity: 0.6;
+}
+.card-front {
+    transform: rotateY(180deg);
+    background: var(--cream);
+    border: 2px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.card-emoji {
+    font-size: 32px;
+}
+.card-label {
+    font-size: 9px;
+    text-align: center;
+    margin-top: 6px;
+}
+.game-footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid var(--parchment3);
+    font-size: 8px;
+    margin-top: 8px;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,15,0,0.85);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.modal-overlay.visible { display: flex; }
+.modal-paper {
+    background: var(--cream);
+    border: 4px double var(--ink);
+    padding: 24px;
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+}
+.modal-stamp {
+    font-family: 'Oswald', sans-serif;
+    color: var(--stamp-red);
+    border: 2px solid var(--stamp-red);
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+.modal-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+}
+.modal-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 16px 0;
+    padding: 12px;
+    border-top: 1px solid var(--parchment3);
+    border-bottom: 1px solid var(--parchment3);
+}
+.modal-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8px;
+    display: block;
+}
+.modal-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+}
+@media (max-width: 800px) {
+    .portal-layout, .game-layout { grid-template-columns: 1fr; }
+    .game-grid { grid-template-columns: repeat(2, 1fr); }
+    .logo { font-size: 2rem; }
+}
