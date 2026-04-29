@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Wanted: Memory Match — The Daily Sleuth</title>
+    <meta name="description" content="Play Memory Match - find matching pairs of clues and suspects. Track your moves, time, and earn your detective rank!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -17,22 +18,21 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="game.html">Play Game</a>
-                <a href="#">Leaderboard</a>
                 <a href="#">Archives</a>
                 <a href="#">About</a>
             </div>
             <div class="nav-date">The Daily Sleuth — Est. 1887</div>
         </div>
 
-        <!-- Game Area - Compact Layout No Scroll -->
+        <!-- Game Area - Fully Responsive -->
         <div class="game-layout">
-            <!-- Left Sidebar (compact) -->
+            <!-- Left Sidebar -->
             <div class="game-sidebar">
                 <div class="sidebar-title">CASE FILE</div>
                 <div class="case-note">The Crowbar Bandit strikes at midnight. Match clues to identify the culprit.</div>
                 <div class="classified-mini">
                     <strong>EVIDENCE LOG</strong>
-                    Mask, Watch, Glove, Rope, Fingerprints...
+                    Mask, Watch, Glove, Rope, Fingerprints, Crowbar, Badge
                 </div>
             </div>
 
@@ -66,23 +66,24 @@
                     <button id="startGameBtn" class="game-btn">▶ START</button>
                     <button id="restartGameBtn" class="game-btn outline">↺ RESTART</button>
                     <button id="hintGameBtn" class="game-btn outline">✦ HINT</button>
-                    <button id="leaderboardBtn" class="game-btn outline">⊞ RANKING</button>
+                    <button id="leaderboardBtn" class="game-btn outline">🏆 RANK</button>
                 </div>
 
-                <!-- Card Grid - 4x4 compact -->
+                <!-- Card Grid -->
                 <div class="game-grid" id="memoryGrid"></div>
             </div>
 
             <!-- Right Sidebar -->
             <div class="game-sidebar">
-                <div class="sidebar-title">DETECTIVE RANKS</div>
+                <div class="sidebar-title">🏅 RANK SYSTEM</div>
                 <div class="rank-info">
-                    <div>S★★★ ≤14 moves</div>
-                    <div>A★★☆ 15-18 moves</div>
-                    <div>B★☆☆ 19-24 moves</div>
-                    <div>C☆☆☆ ≥25 moves</div>
+                    <div>S★★★ ≤14 moves — Master Detective</div>
+                    <div>A★★☆ 15-18 moves — Senior Inspector</div>
+                    <div>B★☆☆ 19-24 moves — Junior Detective</div>
+                    <div>C☆☆☆ ≥25 moves — Constable</div>
                 </div>
                 <div class="tip-mini mt-2">💡 Hint reveals all cards briefly — use when stuck!</div>
+                <div class="tip-mini mt-2">✨ Fewer moves = higher rank. Train your memory!</div>
             </div>
         </div>
 
